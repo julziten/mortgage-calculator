@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass src/styles/sass/main.scss src/styles/css/style.css -w"
+    "sass": "node-sass src/styles/sass/main.scss src/styles/css/style.css -w",
+    "build": "babel src -d lib"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,10 @@
   "homepage": "https://github.com/julziten/consumeraffairs#readme",
   "dependencies": {
     "node-sass": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15"
   }
 }
