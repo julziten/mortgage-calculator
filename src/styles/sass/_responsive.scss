@@ -1,0 +1,32 @@
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    body {
+        .container {
+            display: block;
+            margin: 0;
+            width: 95%;
+            .box {
+                width: auto;
+            }
+            .results {
+                width: auto;
+                padding: 20px;
+                .principle, .tax, .insurance, .total {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: 2px solid $grey;
+                        p {
+                            text-align: right;
+                            width: 100px;
+                        }
+                } 
+                .total {
+                    border: none;
+                }
+            }
+        }
+    }
+}

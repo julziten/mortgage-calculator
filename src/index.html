@@ -7,7 +7,82 @@
     <link rel="stylesheet" href="styles/css/style.css">
 </head>
 <body>
-    <h1>Mortage Calculator</h1>
+    <div class="principal-title">
+        <h1>Mortage Calculator</h1>
+    </div>
+    <div class="container">
+        <div class="box">
+            <div class="calculator">
+                <div class="title">
+                    <h4>Change values to calculate your results</h4>
+                </div>
+                <div class="years">
+                    <label for="years">Years of mortgage</label>
+                    <form>
+                        <div class="container-input">
+                            <label>1</label>
+                            <input class="e-range" type="range" id="years" name="years" min="1" max="40" value="30">
+                            <label>40</label>
+                        </div>
+                        <input type="text" name="years" id="yearsValue" value="30">
+                    </form>
+                </div>
+                <div class="interest">
+                    <label for="rate">Rate of interest (%)</label>
+                    <form>
+                        <div class="container-input">
+                            <label>0.1</label>
+                            <input class="e-range" type="range" id="rate" name="rate" min="0" max="10" value="0.8" step="0.1">
+                            <label>10</label>
+                        </div>
+                        <input type="text" name="rate" id="rateValue" value="0.8">
+                    </form>
+                </div>
+                <div class="loan-amount">
+                    <label for="loan-amount">Loan Amount</label>
+                    <input type="number" name="loan-amount" id="loan-amount" value="100000" required>
+                    <label for="loan-amount" class="fixed-value">$</label>
+                    <label for="loan-amount" class="error" id="loan-error">Mandatory Field</label>
+                </div>
+                <div class="annual">
+                    <div class="annual-tax">
+                        <label for="annual-tax">Annual Tax</label>
+                        <input type="number" name="annual-tax" id="annual-tax" value="1000" required>
+                        <label for="annual-tax" class="fixed-value">$</label>
+                        <label for="loan-amount" class="error" id="tax-error">Mandatory Field</label>
+                    </div>
+                    <div class="annual-insurance">
+                        <label for="annual-insurance">Annual Insurance</label>
+                        <input type="number" name="annual-insurance" id="annual-insurance" value="300" required>
+                        <label for="annual-insurance" class="fixed-value">$</label>
+                        <label for="loan-amount" class="error" id="insurance-error">Mandatory Field</label>
+                    </div>
+                </div>
+                <div class="submit">
+                    <button type="submit" id="calculate">Calculate</button>
+                </div>
+            </div>
+        </div>
+        <div class="results">
+            <h4>Your Results</h4>
+            <div class="principle">
+                <label>Principle & Interest</label>
+                <p id="principleInterest" class="results-text">$ - -</p>
+            </div>
+            <div class="tax">
+                <label>Tax</label>
+                <p id="tax" class="results-text">$ - -</p>
+            </div>
+            <div class="insurance">
+                <label>Insurance</label>
+                <p id="insurance" class="results-text">$ - -</p>
+            </div>
+            <div class="total">
+                <label>Total Monthly Payment</label>
+                <p id="total" class="results-text">$ - -</p>
+            </div>
+        </div>
+    </div>
     <script src="js/index.js"></script>
 </body>
 </html>
