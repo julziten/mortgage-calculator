@@ -13,6 +13,7 @@ const principleInterest = document.getElementById('principleInterest');
 const tax = document.getElementById('tax');
 const insurance = document.getElementById('insurance');
 const total = document.getElementById('total');
+const results = document.getElementById('results');
 
 
 // Mortgage calculator function fired when user press 'calculate'
@@ -25,7 +26,8 @@ const calculateMortgage = (e) => {
         && annualTax.value.length != 0 
         && annualInsurance.value.length != 0) {
         Array.from(resultsText).map(elem => elem.style.color = 'black');
-        const result = ((rate.value / 100) / 12) * loanAmount.value / (1-Math.pow((1 + ((rate.value / 100)/12)), -years.value*12));
+        results.classList.add('show');
+        const result = ((rate.value / 100) / 12) * loanAmount.value / (1-Math.pow((1 + ((rate.value / 100)/12)), - years.value*12));
         principleInterest.innerHTML = result.toFixed(2);
         tax.innerHTML = (annualTax.value / 12).toFixed(2);
         insurance.innerHTML = (annualInsurance.value / 12).toFixed(2);

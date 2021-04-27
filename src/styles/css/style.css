@@ -470,7 +470,8 @@ body .box {
       width: auto; }
     body .container .results {
       width: auto;
-      padding: 20px; }
+      padding: 20px;
+      display: none; }
       body .container .results .principle, body .container .results .tax, body .container .results .insurance, body .container .results .total {
         display: flex;
         align-items: center;
@@ -480,4 +481,6 @@ body .box {
           text-align: right;
           width: 100px; }
       body .container .results .total {
-        border: none; } }
+        border: none; }
+    body .container .show {
+      display: block; } }
